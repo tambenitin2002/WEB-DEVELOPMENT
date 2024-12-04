@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Basic&family=Grechen+Fuemen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Basic&family=Grechen+Fuemen&family=Montserrat+Alternates:wght@400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+body{
+    background-color: black;
+    color: azure;
+    padding: 0px 30px 30px 30px;
+}
+div{
+
+}
+button{
+    background-color: #250d40;
+    color:  white;
+    border-radius: 0px 15px 0px;
+    padding: 10px 20px 10px;
+    
+}
+button:hover{
+    background-color: #2a13389b;
+    transition: 0.5s ease;
+}
+/* Common Properties For Home */
+.c{
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+}
+
+
+.home{
+   display: flex; 
+   height: 100vh;
+   width: 100%;
+}
+
+
+
+.about{
+   
+    background-color: aqua;
+    flex-basis: 25%;
+}
+
+
+/* Home Menu Part */
+.home-box{
+   
+}
+
+.menu{
+    background-color: chartreuse;
+    flex-basis: 10%;
+}
+
+.home-box a{
+    font-size: 2rem;
+}
+.home-box-menu{
+    height: 300px;
+    width: 80px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+   flex-direction: column;
+   border-radius: 40px;
+}
+
+/* ------------------------------------------------------------------- */
+
+/* Skill & Resume */
+
+.hbc{
+    background-color: red;
+    border: 2px solid black;
+    height: 350px;
+    width: 250px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.rs{
+    background-color: blueviolet;
+    flex-basis: 30%;
+    flex-direction: column;
+
+}
+.resume{
+    
+}
+.resume-item h1{
+    text-align: center;
+}
+.resume-pic{
+    height: 110px;
+    width: 200px;
+    border-radius: 20px;
+    background-color: yellow;
+    overflow: hidden;
+    position: relative;
+}
+.resume-pic img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+
+}
+.skill{
+   
+    background-color: blueviolet;
+    
+}
+.home-box-skill{
+    row-gap: 10%;
+}
+.skill-icons-row img{
+    width: 34px;
+}
+
+/* ------------------------------------------------------------------- */
+
+
+/* Home Profile Part */
+
+.profile{
+   
+    background-color: blue;
+    flex-basis: 40%;
+    z-index: -1;
+}
+
+.home-box-profile{
+    background-color: red;
+    border: 2px solid black;
+    height: 700px;
+    width: 400px;
+    display: flex;
+    border-radius: 30px 18px 30px;
+    align-items: end;
+    overflow: hidden;
+    
+    
+}
+.home-box-profile img{
+    height: 700px;
+    width: 400px;
+
+}
+
+.home-profile-project-box{
+    height: 170px;
+    width: 250px;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    margin: 20px;
+    z-index: 100;
+    position: absolute;
+    padding: 20px;
+
+}
+.home-profile-project-box button{
+    padding: 5px 10px 5px;
+    border-radius: 5px 10px 5px;
+    background: transparent;
+    text-align: center;
+    z-index: 10;
+}
+
+
+
+/* ------------------------------------------------------------------- */
+
+/* Home About Part */
+
+.home-box-about{
+    background-color: red;
+    border: 2px solid black;
+    height: 700px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    row-gap: 5%;
+}
+.home-box-about-social{
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+
+}
+.home-box-about-image{
+    height: 250px;
+    width: 220px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.home-box-about-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* ------------------------------------------------------------------- */
+
+
+
+
+/* Project */
+
+#project{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.card-list .card-item{
+    color: #fff;
+    width: 400px;
+    user-select: none;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    backdrop-filter: blur(30px);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.card-list .card-item .user-image{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    border: 3px solid #fff;
+    padding: 10px;
+
+}
+
+.card-list .card-item .user-profession{
+    font-size: 1.25rem;
+    color: #e3e3e3;
+    font-weight: 500;
+    margin: 14px 0 40px
+}
+
+.card-list .card-item .message-button{
+    font-size: 1.25rem;
+    padding: 10px 35px;
+    color: #030728;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid transparent;
+    transition: 0.02s ease;
+}
+
+.card-list .card-item .message-button:hover{
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.slider-wrapper{
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 70px 55px ;
+}
+
+.slider-wrapper .swiper-pagination-bullet{
+    background: #fff;
+    height: 15px;
+    width: 15px;
+}
+.slider-wrapper .swiper-slide-button{
+    color: #fff;
+    margin-top: -50px;
+    transition: 0.02s ease;
+}
+
+.slider-wrapper .swiper-slide-button:hover {
+    color: #4658ff;
+}
+
+@media (max-width: 768px){
+    .slider-wrapper{
+        margin: 0 10px 40px;
+    }
+    .slider-wrapper .swiper-slide-button{
+        display: none;
+    }
+}
+
+
+
+/* ------------------------------------------------------------------- */
+
+/* Services */
+
+.services{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3%;
+    margin: 0px 30px;
+}
+.services-card{
+    margin: 10px;
+    height: 300px;
+    width:  300px;
+    background-color: rgb(10, 134, 244);
+    border-radius: 20px;
+    padding: 10px ;
+    
+  
+}
+.color-circle{
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    background-color: red;
+    box-shadow: 0px 0px 5px 5px gray;
+    display: flex;
+    align-items: end;
+    margin: 10px 10px;
+}
+.services-card-img{
+    height: 200px;
+    width: 330px;
+    overflow: hidden;
+   
+    display: flex;
+   align-items: end;
+
+}
+
+.services-card-img img{
+    border-radius: 15px;
+}
+
+.services-card-info img{
+    border-radius: 15px;
+}
+.servises-card-info-skill-icon{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 5%;
+}
+
+/* ------------------------------------------------------------------- */
+
+/* Experience */
+
+
+/* ------------------------------------------------------------------- */
+
+/* Contact Part */
+
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .table-box{
+    width: 100%;
+    display: flex;
+    background-color: red;
+    height: 150px;
+    justify-content: center;
+      align-items: center;
+  }
+
+  .experience-table{
+      width: 70%;
+      background-color: green;
+  }
+
+  .experience-table-tr-td-box{
+    height: 100px;
+    width: 400px;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+   
+
+  }
+/* ------------------------------------------------------------------- */
+
+/* Footer */
+
+
+footer{
+   
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 2rem;
+    width: 100%;
+   
+}
+.footer-top{
+   
+}
+.footer-top-left{
+    flex-basis: 40%;
+    
+}
+.footer-top-mid{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: left;
+    flex-basis: 20%;
+    flex-direction: row;
+    width: 700px;
+    
+    
+}
+.footer-top-mid a{
+    text-decoration: none;
+    color: rgb(255, 3, 3);
+}
+.footer-top-right{
+    flex-basis: 20%;
+}
+
+.footer-top-items footer-top-mid a{
+   text-decoration: none;
+   color: white;
+   font-style: bold;
+    
+}
+
+.footer-bottom{
+    text-align: center;
+}
+
+/* ------------------------------------------------------------------- */
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+       opacity: 1;
+       scale: 1; 
+    }
+}
+.block{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #navbar {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(163, 109, 213);
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropdown a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+        .dropdown:hover a {
+            border-bottom: 2px solid red;
+        }
+        .dropdown:hover #dropdown-content a{
+            border: none;
+        }
+        .dropdown:hover #dropdown-content {
+            display: block;
+        }
+        #dropdown-content {
+            display: none;
+            position: fixed;
+            top: 60px; /* Just below the navbar */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: yellow;
+            width: 80%; /* Adjust width as needed */
+            
+            padding-top: 10px;
+            z-index: 1000;
+        }
+        #dropdown-content a {
+            color: black;
+            text-decoration: none;
+            padding: 8px 10px;
+            display: block;
+        }
+        #dropdown-content a:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    </style>
+
+</head>
+<body>
+    <nav id="navbar">
+        <div class="dropdown">
+            <a href="#">Man</a>
+            <div id="dropdown-content">
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">woMan</a>
+            <div id="dropdown-content">
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">kids</a>
+            <div id="dropdown-content">
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">home & garden</a>
+            <div id="dropdown-content">
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+                <a href="#"><p>good morning</p></a>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>

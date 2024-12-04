@@ -1,0 +1,205 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Slider Container */
+.slider-container {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Background for Previous and Next Slides */
+.slider-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.background-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(15px);
+  opacity: 0; /* Set initial opacity to 0 */
+  transition: opacity 0.5s ease-in-out;
+}
+
+.background-slide.active {
+  opacity: 0.5; /* Active background image opacity */
+}
+
+/* Foreground Slides */
+.slides {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+ padding: 35px 10px 35px;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 20px;
+ 
+}
+
+.slide {
+  display: none;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 0;
+   border-radius: 20px;
+}
+
+.slide.active {
+  display: block;
+  opacity: 1;
+  animation: slideIn 0.5s forwards;
+  
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Navigation Buttons */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 3;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: scale(1.05);
+}
+
+.prev {
+  left: 15px;
+}
+
+.next {
+  right: 15px;
+}
+
+/* Dots */
+.dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.dot {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
+.dot:hover {
+  background-color: #999;
+  transform: scale(1.1);
+}
+
+/* Typography for Slides */
+h2 {
+  font-size: 24px;
+  margin: 10px 0;
+  color: #222;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+}
+
+p {
+  font-size: 16px;
+  color: #555;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .slider-container {
+    width: 95%;
+  }
+
+  .prev, .next {
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .prev, .next {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+}
